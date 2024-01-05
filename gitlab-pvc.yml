@@ -1,0 +1,12 @@
+kind: PersistentVolumeClaim
+apiVersion: v1
+metadata:
+  name: gitlab-vol
+  namespace: gitlab
+spec:
+  accessModes:
+  - ReadWriteOnce
+  storageClassName: premium-rwo
+  resources:
+    requests:
+      storage: 5Gi
