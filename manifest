@@ -1,0 +1,18 @@
+# create gitlab namespace
+$ kubectl create -f gitlabns.yml
+# deploy redis
+$ kubectl create -f redissvc.yml
+$ kubectl create -f redis-deploy.yml
+# deploy postgres
+$ kubectl create -f postgresssvc.yml
+$ kubectl create -f postgress-deploy.yml
+# deploy gitlab itself
+$ kubectl create -f gitlabsvc.yml
+$ kubectl create -f gitlab-deploy.yml
+# deploy ingress controller
+$ kubectl create -f ingress-backend.yml
+$ kubectl create -f ingress-configmap.yml
+$ kubectl create -f ingress-lb.yml
+$ kubectl create -f ingress-gitlab.yml
+#pvc
+$ kubectl create -f gitlab-pvc.yml
